@@ -30,13 +30,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%; /* Adjusted for mobile */
+    width: 90%;
     max-width: 600px;
     background: var(--color-secondary);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     border: 1px solid var(--color-border);
-    padding: 20px; /* Reduced padding for mobile */
+    padding: 25px;
     animation: fadeIn 0.8s ease-in-out;
 }
 
@@ -46,12 +46,11 @@ body {
 }
 
 header h1 {
-    font-size: 28px; /* Reduced font size for mobile */
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 15px;
     color: var(--color-text);
     text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.2);
-    text-align: center; /* Center align for mobile */
 }
 
 .input-section {
@@ -69,7 +68,6 @@ header h1 {
     background-color: var(--color-primary);
     color: var(--color-text);
     transition: border-color 0.3s ease;
-    font-size: 14px; /* Smaller font size for mobile */
 }
 
 .input-section input:focus {
@@ -158,48 +156,4 @@ header h1 {
 
 .todo-actions button:active {
     transform: scale(0.95);
-}
-
-/* Mobile-Specific Optimizations */
-@media (max-width: 768px) {
-    .container {
-        width: 95%; /* Wider container for mobile */
-        padding: 15px; /* Reduced padding for mobile */
-    }
-
-    header h1 {
-        font-size: 24px; /* Smaller font size for mobile */
-    }
-
-    .input-section {
-        flex-direction: column; /* Stack inputs vertically on mobile */
-    }
-
-    .input-section input {
-        width: 100%; /* Full width for inputs on mobile */
-    }
-
-    .todos-filter {
-        flex-direction: column; /* Stack filter and delete button vertically on mobile */
-        gap: 10px; /* Added gap for better spacing */
-    }
-
-    .dropdown {
-        width: 100%; /* Full width for dropdown on mobile */
-    }
-
-    .dropdown .filter-button {
-        width: 100%; /* Full width for filter button on mobile */
-        text-align: center; /* Center text */
-    }
-
-    .todo-actions {
-        flex-wrap: wrap; /* Wrap buttons on mobile */
-        justify-content: center; /* Center buttons */
-    }
-
-    .todo-actions button {
-        padding: 8px 12px; /* Smaller padding for buttons on mobile */
-        font-size: 14px; /* Smaller font size for buttons on mobile */
-    }
 }
