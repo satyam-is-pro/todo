@@ -14,45 +14,43 @@
     <div class="container">
         <header>
             <h1>Todo List</h1>
-            <div class="alert-message"></div>
             <div class="input-section">
-                <input type="text" placeholder="Add a todo . . ." class="todo-input" />
-                <input type="date" class="schedule-date" />
-                <button class="add-task-button">
+                <input type="text" placeholder="Add a todo..." class="input input-bordered input-secondary w-full max-w-xs" />
+                <input type="date" class="input input-bordered input-secondary w-full max-w-xs schedule-date" />
+                <button class="btn btn-secondary add-task-button">
                     <i class="bx bx-plus bx-sm"></i>
                 </button>
             </div>
         </header>
-
+    
         <div class="todos-filter">
             <div class="dropdown">
-                <label tabindex="0" class="filter-button">Filter <i class="bx bx-chevron-down bx-sm"></i></label>
-                <ul tabindex="0" class="dropdown-content">
+                <label tabindex="0" class="btn m-1">Filter</label>
+                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                     <li onclick="filterTodos('all')"><a>All</a></li>
                     <li onclick="filterTodos('pending')"><a>Pending</a></li>
                     <li onclick="filterTodos('completed')"><a>Completed</a></li>
                 </ul>
             </div>
-            <button class="delete-all-btn">Delete All</button>
-            
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Task</th>
-                        <th>Due Date</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody class="todos-list-body">
-                    <!-- Todo items will be dynamically inserted here -->
-                </tbody>
-            </table>
-
+            <button class="btn btn-secondary delete-all-btn">
+                Delete All
+            </button>
         </div>
-
+    
+        <table class="table w-full">
+            <thead>
+                <tr>
+                    <th>TASK</th>
+                    <th>DUE DATE</th>
+                    <th>STATUS</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody class="todos-list-body">
+                <!-- Todo items will be dynamically inserted here -->
+            </tbody>
+        </table>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
